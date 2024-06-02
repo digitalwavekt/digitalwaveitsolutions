@@ -228,6 +228,8 @@ th {
   text-align: inherit;
 }
 
+
+
 label {
   display: inline-block;
   margin-bottom: 0.5rem;
@@ -237,10 +239,6 @@ button {
   border-radius: 0;
 }
 
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
 
 input,
 button,
@@ -491,7 +489,7 @@ mark,
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
-  border: 1px solid #dee2e6;
+  /* border: 1px solid #dee2e6; */
   border-radius: 0.2rem;
   max-width: 100%;
   height: auto;
@@ -8777,6 +8775,7 @@ button.bg-dark:focus {
 
 .w-100 {
   width: 100% !important;
+  border-radius: 18px;
 }
 
 .w-auto {
@@ -10994,6 +10993,8 @@ p {
 
 .mb-4 {
   margin-bottom: 30px !important;
+  border-radius: 10px;
+  box-shadow: 5px;
 }
 
 .bg-primary .navbar-brand,
@@ -11083,6 +11084,7 @@ p {
   position: relative;
 }
 
+
 .widget .widget-item:after {
   content: "\e649";
   font-family: 'themify';
@@ -11101,7 +11103,7 @@ p {
 }
 
 .widget .widget-item i {
-  color: #ff214f;
+  color: #cdcdcd;
   font-size: 40px;
   display: block;
   margin-bottom: 25px;
@@ -11237,13 +11239,27 @@ p {
 }
 
 .testimonial-wrapper .body {
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
   text-align: left;
   border: 1px solid #eaf0fc;
   background: #fff;
   padding: 20px 20px 20px 60px;
   border-radius: 0.2rem;
-}
+  transition: transform 2s ease
 
+}
+.testimonial-wrapper .body:hover {
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.avatarimg {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease; /* Smooth transition for the transform */
+}
+.testimonial-wrapper .img-holder:hover .avatarimg{
+  transform: scale(1.2);
+
+}
 .testimonial-wrapper .body .title {
   margin-top: 20px;
   font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1300 - 300)));
@@ -11298,6 +11314,8 @@ p {
 
 .box .box-item:last-child {
   border: 0;
+  position: relative;
+  bottom: 30px;
 }
 
 @media (max-width: 767.98px) {
@@ -11400,6 +11418,7 @@ p {
   }
 }
 
+
 .card img.inset {
   display: block !important;
   -webkit-transform: translateY(5%);
@@ -11425,6 +11444,7 @@ p {
 .card.blog-post {
   position: relative;
   background: #fff;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
 }
 
 .card.blog-post img {
@@ -11441,6 +11461,7 @@ p {
   background: inherit;
   border-radius: 0.2rem 0.2rem 0 0;
 }
+
 
 .card.blog-post .card-body .details {
   text-align: center;
@@ -11466,6 +11487,7 @@ p {
   display: inline-block;
   width: 25px;
 }
+
 
 .contact-card {
   border-radius: 0.2rem;
@@ -11817,13 +11839,16 @@ pre .code {
 
 .header .overlay .subtitle {
   margin-top: -20px;
-  font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
+  font-size: 25px;
   font-weight: 300;
+}
+.imgradius{
+  border-radius: 20px;
 }
 
 .header .overlay .title {
-  font-size: calc(40px + (90 - 40) * ((100vw - 320px) / (1200 - 320)));
   margin-bottom: 40px;
+  font-size: 79px;
 }
 
 @media (max-width: 767.98px) {
@@ -11921,6 +11946,59 @@ section .section-subtitle {
   margin-bottom: 5px;
   opacity: .6;
 }
+section .longtext #more{
+ display: none;
+}
+section .longtext #more1{
+ display: none;
+}
+section .longtext #more2{
+ display: none;
+}
+section .longtext #more3{
+ display: none;
+}
+section .card-body #more4{
+ display: none;
+}
+section .card-body #more5{
+ display: none;
+}
+section .card-body #more6{
+ display: none;
+}
+
+section .longtext .card-body p{
+  overflow: scroll;
+  height: 114px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+section .longtext .card-body button{
+ border: none;
+ background: none;
+ color: red;
+ font-weight: bold;
+font-size: 13px; 
+text-decoration: underline;
+}
+.butonses{
+ border: none;
+ background: none;
+ color: red;
+ font-weight: bold;
+font-size: 13px; 
+text-decoration: underline;
+}
+section .longtext .card-body{
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-radius: 7px;
+}
+section .longtext .card-body{
+height: 350px;
+
+}
 
 @media (min-width: 992px) {
   section .section-subtitle {
@@ -11934,7 +12012,7 @@ section .section-title {
 
 @media (min-width: 992px) {
   section .section-title {
-    font-size: 35px;
+    font-size: 50px;
   }
 }
 
